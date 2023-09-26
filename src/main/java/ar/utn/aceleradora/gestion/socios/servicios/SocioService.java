@@ -66,6 +66,7 @@ public class SocioService {
     Pageable pageable = PageRequest.of(pagina, tamanio);
     List<Socio> sociosFiltrados;
 
+
     List<Categoria> categorias = categoriaOptional.isPresent() ? categoriaService.obtenerCategoriasPorNombres(categoriaOptional.get()) : null;
     LocalDate fechaInicioMembresia = aniosActivosOptional.isPresent() ? fechaActual.minusYears(aniosActivosOptional.get()) : null;
 
@@ -131,6 +132,7 @@ public class SocioService {
 
     Socio socioGuardado = socioRepository.save(socio);
 
+    // Reutiliza el mapeo existente para convertir Socio a SocioDTO
     SocioDTO socioDTO = modelMapper.map(socioGuardado, SocioDTO.class);
 
     return socioDTO;
