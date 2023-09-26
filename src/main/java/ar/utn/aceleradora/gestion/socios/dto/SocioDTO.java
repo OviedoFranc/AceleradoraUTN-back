@@ -5,19 +5,19 @@ import ar.utn.aceleradora.gestion.socios.modelos.empresa.TipoSocio;
 import ar.utn.aceleradora.gestion.socios.modelos.ubicacion.Ubicacion;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.BeanUtils;
 
 import java.util.List;
+
 @Getter
 @Setter
-public class ResumenSocioDTO{
+public class SocioDTO {
+  private Integer id;
   private String nombre;
-  private String apellidoPresidente;
   private TipoSocio tipoSocio;
-  private List<Categoria> categoria;
-  private Boolean activo;
+  private Integer telefono;
   private String mail;
-  private String telefono;
+  private String nombrePresidente;  //solo para socios plenarios
+  private List<Categoria> categoria;
   private Ubicacion ubicacion;
-  //TODO: deberia ser un date
-  private Integer AniosDeAntiguedad;
 }
