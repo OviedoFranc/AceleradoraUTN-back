@@ -7,5 +7,5 @@ RUN apk add --no-cache bash
 # Directorio donde nuestra aplicación se ejecutará dentro del contenedor
 WORKDIR /app
 
-# Copia cualquier JAR compilado al contenedor
+# Copio cualquier JAR compilado al contenedor
 COPY target/*.jar /app/app.jar
