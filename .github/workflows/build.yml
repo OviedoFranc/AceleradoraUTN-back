@@ -29,6 +29,9 @@ jobs:
 
     - name: Construyendo con Maven
       run: mvn clean install -DskipTests
+      
+    - name: List target directory
+      run: ls -la target/
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
