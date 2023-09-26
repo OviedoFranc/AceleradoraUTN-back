@@ -27,7 +27,7 @@ services:
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
       - PORT=8080
 
-    command: ["/wait-for-it.sh", "mysql-tabla:3306", "--", "java", "-jar", "/app.jar"]
+    command: ["/wait-for-it.sh", "mysql-tabla:3306", "--"]
 
 volumes:
   mysql-data:
