@@ -6,19 +6,24 @@ import ar.utn.aceleradora.gestion.socios.modelos.ubicacion.Ubicacion;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
+
 @Getter
 @Setter
-public class ResumenSocioDTO{
+public class SocioDTO {
   private Integer id;
   private String nombre;
-  private String apellidoPresidente;
   private TipoSocio tipoSocio;
-  private List<Categoria> categorias;
   private Boolean activo;
-  private String mail;
+  //private Integer telefono;
   private String telefono;
+  private String mail;
+  private String nombrePresidente;  //solo para socios plenarios
+  private List<Categoria> categorias;
   private Ubicacion ubicacion;
-  //TODO: deberia ser un date
-  private Integer AniosDeAntiguedad;
+
+    public SocioDTO() {
+    //this.categorias = new ArrayList<>();
+    }
 }

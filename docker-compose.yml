@@ -7,8 +7,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: modulo_socios
-      MYSQL_USER: aceleradorauser
-      MYSQL_PASSWORD: aceleradorpassword
+      MYSQL_USER: usuario
+      MYSQL_PASSWORD: usuario
     ports:
       - "3306:3306"
     volumes:
@@ -16,15 +16,14 @@ services:
 
   socios-back:
     build: .
-    image: 4lexander/aceleradora_utn:latest
     ports:
       - "8080:8080"
     depends_on:
       - mysql-tabla
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-tabla:3306/modulo_socios
-      - SPRING_DATASOURCE_USERNAME=aceleradorauser
-      - SPRING_DATASOURCE_PASSWORD=aceleradorpassword
+      - SPRING_DATASOURCE_USERNAME=usuario
+      - SPRING_DATASOURCE_PASSWORD=usuario
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
       - PORT=8080
 
