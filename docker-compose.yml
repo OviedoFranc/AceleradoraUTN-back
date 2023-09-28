@@ -15,7 +15,7 @@ services:
       - mysql-data:/var/lib/mysql
 
   socios-back:
-    image: 4lexander/aceleradora_utn:latest
+    build: .
     ports:
       - "8080:8080"
     depends_on:
