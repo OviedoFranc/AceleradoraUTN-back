@@ -47,5 +47,3 @@ jobs:
         tags: |
           4lexander/aceleradora_utn:${{ github.run_number }}
           4lexander/aceleradora_utn:latest
-
-          
