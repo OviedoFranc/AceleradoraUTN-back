@@ -24,7 +24,7 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-tabla:3306/modulo_socios
       - SPRING_DATASOURCE_USERNAME=usuario
       - SPRING_DATASOURCE_PASSWORD=usuario
-      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=create-drop
       - PORT=8080
 
     command: ["/wait-for-it.sh", "mysql-tabla:3306", "java", "-jar", "/app/app.jar"]
